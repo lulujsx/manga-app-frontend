@@ -26,7 +26,7 @@ const RegisterView = () => {
             email: "",
             password: ""
         })
-        navigate('/')
+        navigate('/login')
     }
 
     return (
