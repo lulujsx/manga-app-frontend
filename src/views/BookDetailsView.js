@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Button } from "react-bootstrap"
+import { Button, Col, Container, Row } from "react-bootstrap"
 import { useParams } from "react-router-dom"
 import { useUser } from "../context/userProvider"
 import { getBookById } from "../services/bookService"
@@ -21,8 +21,10 @@ export default function BookDetailsView() {
 
 
     return (
-        <div className="container mt-5">
-            <div className="cardd">
+        <Container className="mt-5">
+            <Row className="cardd">
+            
+            <Col sm={8}>
                 <div className="card_info">
                     <h2>{book.title}</h2>
                     <h3>{book.author}</h3>
@@ -35,17 +37,19 @@ export default function BookDetailsView() {
                     </>
                     ))}
                     </div>
-                { user && user.user && user.user.role === "ADMIN" && (
-                    <Button variant="outline-dark" href={`/editBook/${book._id}`}>Editar Manga</Button>
-                )}
+                
                 </div>
+                </Col>
+                <Col sm={4}>
                 <div className="card_img">
                     <img style={{height:400}} src={book.image} alt="foto portada del manga"/>
                 </div>
-                
-                
-            </div>
-           
-        </div>
+                </Col>
+              
+        </Row>
+        { user && user.user && user.user.role === "ADMIN" && (
+                    <Button variant="outline-dark" className="customButton" href={`/editBook/${book._id}`}>Editar Manga</Button>
+                )}
+        </Container>
     )
 }
