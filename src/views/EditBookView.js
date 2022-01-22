@@ -30,6 +30,7 @@ const EditBookView = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        book.genre = book.genre.split(",")
         await editBook(book,id)
         setBook({
             title: "",

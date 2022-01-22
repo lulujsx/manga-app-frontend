@@ -20,6 +20,7 @@ const RegisterView = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         const response = await register(user)
+        console.log(response)
         setUser({
             name: "",
             email: "",
