@@ -26,7 +26,7 @@ export default function BookDetailsView() {
                 <div className="card_info">
                     <h2>{book.title}</h2>
                     <h3>{book.author}</h3>
-                    <h3>Volumenes: {book.numberOfPages}</h3>
+                    <h5>Volumenes: {book.numberOfPages}</h5>
                     <p>{book.description}</p>
                     <div className="card_tags">
                     {book.genre?.map((g, i) => (
