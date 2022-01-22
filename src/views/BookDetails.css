@@ -1,0 +1,25 @@
+.container.mt-5 .cardd{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container.mt-5 .cardd .card_info{
+    padding:1rem;
+}
+
+.container.mt-5 .cardd .card_tags{
+    display:flex;
+    max-width:60%;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.tags{
+    color: white;
+    padding: 4px 8px;
+    background-color:black;
+    border-radius:6px;
+    
+}
