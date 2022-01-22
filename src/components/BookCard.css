@@ -1,6 +1,7 @@
 .bookCard {
     box-shadow: 0px 15px 15px lightgray;
     border-radius: 20px!important;
+    margin: auto;
 }
 
 .bookCard img {
