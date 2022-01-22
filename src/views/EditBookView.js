@@ -39,7 +39,7 @@ const EditBookView = () => {
             numberOfPages: "",
             image: ""
         })
-        navigate('/')
+        navigate(`/book/${id}`)
     }
 
     const handleDelete = async (event) => {
